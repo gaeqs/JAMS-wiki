@@ -17,6 +17,11 @@ const config = {
     projectName: 'JAMS-wiki', // Usually your repo name.
     trailingSlash: false,
 
+    i18n: {
+      defaultLocale: 'en',
+      locales: ['en', 'es']
+    },
+
     presets: [
         [
             'classic',
@@ -62,6 +67,7 @@ const config = {
                         label: 'GitHub',
                         position: 'right',
                     },
+                    { type: 'localeDropdown'}
                 ],
             },
             footer: {
