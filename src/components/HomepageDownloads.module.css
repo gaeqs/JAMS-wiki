@@ -1,0 +1,20 @@
+.downloads {
+    background-color: var(--ifm-color-primary-dark);
+    padding: 2rem 0;
+}
+
+.downloadImageDiv {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+.downloadImageDiv > a {
+    width: fit-content;
+    height: 100%;
+}
+
+.downloadImage {
+    height: 100%;
+    width: auto;
+}
