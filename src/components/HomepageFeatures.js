@@ -8,28 +8,25 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+          JAMS was designed using modern technologies, making it easy to use for beginners.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Fully customizable',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+          JAMS is fully customizable, allowing you to create new themes, translations and plugins.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Powerful simulator',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+          Look into every aspect of your execution using a powerful and customizable simulator.
       </>
     ),
   },

@@ -6,14 +6,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'My Site',
-    tagline: 'Dinosaurs are cool',
+    title: 'JAMS',
+    tagline: 'Just Another MIPS Simulator',
     url: 'https://jams.grialc.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
-    organizationName: 'facebook', // Usually your GitHub org/user name.
+    organizationName: 'gaeqs', // Usually your GitHub org/user name.
     projectName: 'JAMS-wiki', // Usually your repo name.
     trailingSlash: false,
 
@@ -49,10 +49,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                title: 'My Site',
+                title: 'JAMS',
                 logo: {
-                    alt: 'My Site Logo',
-                    src: 'img/logo.svg',
+                    alt: 'JAMS',
+                    src: 'img/logo.png',
                 },
                 items: [
                     {
