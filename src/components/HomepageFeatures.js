@@ -1,33 +1,34 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
+import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 const FeatureList = [
     {
-        title: 'Easy to Use',
+        title: <Translate id="index.feature.title.easyToUse">'Easy to Use'</Translate>,
         image: '/img/JAMS-1.png',
         description: (
-            <>
+            <Translate id="index.feature.message.easyToUse">
                 JAMS was designed using modern technologies, making it easy to use for beginners.
-            </>
+            </Translate>
         ),
     },
     {
-        title: 'Powerful simulator',
+        title: <Translate id="index.feature.title.powerfulSimulator">'Powerful simulator'</Translate>,
         image: '/img/JAMS-2.png',
         description: (
-            <>
+            <Translate id="index.feature.message.powerfulSimulator">
                 Look into every aspect of your execution using a powerful and customizable simulator.
-            </>
+            </Translate>
         ),
     },
     {
-        title: 'Fully customizable',
+        title:  <Translate id="index.feature.title.fullyCustomizable">'Fully customizable'</Translate>,
         image: '/img/JAMS-3.png',
         description: (
-            <>
+            <Translate id="index.feature.message.fullyCustomizable">
                 JAMS is fully customizable, allowing you to create new themes, translations and plugins.
-            </>
+            </Translate>
         ),
     },
 ];

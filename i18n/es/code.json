@@ -1,0 +1,29 @@
+{
+  "index.documentation": {
+    "message": "Documentación"
+  },
+  "index.downloads": {
+    "message": "Descargas"
+  },
+  "index.feature.title.easyToUse": {
+    "message": "Fácil de usar"
+  },
+  "index.feature.message.easyToUse": {
+    "message": "JAMS ha sido diseñado usando tecnologías modernas, haciéndolo sencillo de usar para principiantes."
+  },
+  "index.feature.title.powerfulSimulator": {
+    "message": "Simulador potente"
+  },
+  "index.feature.message.powerfulSimulator": {
+    "message": "Visualiza cada aspecto de tu ejecución usando un potente y personalizable simulador."
+  },
+  "index.feature.title.fullyCustomizable": {
+    "message": "Completamente personalizable"
+  },
+  "index.feature.message.fullyCustomizable": {
+    "message": "JAMS es completamente personalizable, permitiendo crear nuevos temas, traducciones y plugins."
+  },
+  "index.downloads.title": {
+    "message": "Descargas:"
+  }
+}

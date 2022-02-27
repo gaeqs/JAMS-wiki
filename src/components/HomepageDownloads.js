@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './HomepageDownloads.module.css';
+import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 const FeatureList = [
     {
@@ -38,7 +39,9 @@ export default function HomepageDownloads() {
     return (
         <section className={styles.downloads}>
             <div className="container">
-                <h1>Downloads:</h1>
+                <h1 id="downloads">
+                    <Translate id="index.downloads.title">Downloads:</Translate>
+                </h1>
                 <div className='row'>
                     {FeatureList.map((props, idx) => (
                         <Download key={idx} idx={idx} {...props} />

@@ -18,8 +18,8 @@ const config = {
     trailingSlash: false,
 
     i18n: {
-      defaultLocale: 'en',
-      locales: ['en', 'es']
+        defaultLocale: 'en',
+        locales: ['en', 'es']
     },
 
     presets: [
@@ -63,11 +63,14 @@ const config = {
                     },
                     {to: '/blog', label: 'Blog', position: 'left'},
                     {
-                        href: 'https://github.com/facebook/docusaurus',
+                        type: 'localeDropdown',
+                        position: 'right'
+                    },
+                    {
+                        href: 'https://github.com/gaeqs/JAMS',
                         label: 'GitHub',
                         position: 'right',
-                    },
-                    { type: 'localeDropdown'}
+                    }
                 ],
             },
             footer: {
@@ -83,23 +86,6 @@ const config = {
                         ],
                     },
                     {
-                        title: 'Community',
-                        items: [
-                            {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            },
-                            {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
-                        ],
-                    },
-                    {
                         title: 'More',
                         items: [
                             {
@@ -108,12 +94,12 @@ const config = {
                             },
                             {
                                 label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
+                                href: 'https://github.com/gaeqs/JAMS',
                             },
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `JAMS 2020-${new Date().getFullYear()}. Built with Docusaurus.`,
             },
             prism: {
                 theme: lightCodeTheme,
