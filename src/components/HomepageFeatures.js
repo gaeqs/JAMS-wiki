@@ -5,7 +5,7 @@ import Translate from "@docusaurus/core/lib/client/exports/Translate";
 
 const FeatureList = [
     {
-        title: <Translate id="index.feature.title.easyToUse">'Easy to Use'</Translate>,
+        title: <Translate id="index.feature.title.easyToUse">Easy to Use</Translate>,
         image: '/img/JAMS-1.png',
         description: (
             <Translate id="index.feature.message.easyToUse">
@@ -14,7 +14,7 @@ const FeatureList = [
         ),
     },
     {
-        title: <Translate id="index.feature.title.powerfulSimulator">'Powerful simulator'</Translate>,
+        title: <Translate id="index.feature.title.powerfulSimulator">Powerful simulator</Translate>,
         image: '/img/JAMS-2.png',
         description: (
             <Translate id="index.feature.message.powerfulSimulator">
@@ -23,7 +23,7 @@ const FeatureList = [
         ),
     },
     {
-        title:  <Translate id="index.feature.title.fullyCustomizable">'Fully customizable'</Translate>,
+        title:  <Translate id="index.feature.title.fullyCustomizable">Fully customizable</Translate>,
         image: '/img/JAMS-3.png',
         description: (
             <Translate id="index.feature.message.fullyCustomizable">
