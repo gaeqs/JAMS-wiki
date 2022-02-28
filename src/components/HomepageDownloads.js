@@ -35,6 +35,16 @@ function Download({title, image, download}) {
     )
 }
 
+export function HomepageDownloadsSimple() {
+    return (
+        <div className='row'>
+            {FeatureList.map((props, idx) => (
+                <Download key={idx} idx={idx} {...props} />
+            ))}
+        </div>
+    )
+}
+
 export default function HomepageDownloads() {
     return (
         <section className={styles.downloads}>
@@ -42,11 +52,7 @@ export default function HomepageDownloads() {
                 <h1 id="downloads">
                     <Translate id="index.downloads.title">Downloads:</Translate>
                 </h1>
-                <div className='row'>
-                    {FeatureList.map((props, idx) => (
-                        <Download key={idx} idx={idx} {...props} />
-                    ))}
-                </div>
+                <HomepageDownloadsSimple/>
             </div>
         </section>
     );
