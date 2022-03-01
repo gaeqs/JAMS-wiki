@@ -9,6 +9,23 @@ ensamblador MIPS, y se puede extender su funcionamiento con el uso de plugins.
 
 ![Jams](/img/JAMS-1.png)
 
+## Objetivos
+
+La creación de JAMS ha tenido los siguientes objetivos:
+
+- Crear un IDE moderno para lenguajes ensamblador, y en concreto para el lenguaje ensamblador MIPS.
+- Crear un simulador capaz de ejecutar la mayoría de programas ensamblados en MIPS.
+- Crear un sistema completo de personalización, permitiendo al usuario cambiar la apariencia de la aplicación.
+- Permitir a los usuarios expandir las capacidades de la aplicación mediante plugins.
+- Mantener una interfaz sencilla y adecuada para la enseñanza.
+
+## No-objetivos
+
+JAMS no pretende lograr los siguientes objetivos:
+
+- Crear un IDE complejo con soporte para una gran variedad de lenguajes de programación.
+- Crear un entorno de desarrollo que permita crear código válido para entornos MIPS reales.
+
 ## Diseño
 
 JAMS es un IDE basado en **proyectos**. Un proyecto está formado por una carpeta y las siguientes propiedades:

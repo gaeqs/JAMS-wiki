@@ -9,6 +9,22 @@ the functionalities of JAMS using plugins.
 
 ![Jams](/img/JAMS-1.png)
 
+## Goals
+
+JAMS has the following goals:
+
+- Create a modern IDE for assembly languages, focusing in the MIPS assembly language.
+- Create a simulator able to run most of the valid MIPS code.
+- Create a complex personalization system, allowing the user to change the appearance of the application.
+- Allow users to expand the capabilities of the IDE using plugins.
+- Keep the user interface simple and suitable for teaching.
+
+## Non-goals
+
+JAMS is not intended to reach the following goals:
+- It's not a goal to create a complex IDE with support for a wide variety of programming languages.
+- It's not a goal to create a developing environment that can run code from real MIPS ecosystems.
+
 ## Design
 
 JAMS is a **project**-based IDE. A project is conformed of a folder and the following properties:
