@@ -51,7 +51,7 @@ simulaciones que se vayan creando.
 
 ![Editor and its simulations](/img/docs/getting-started/assembledProject-es.png)
 
-Cada sección tiene su propia **barra de herramientas**. Esta barra está situada a la izquierda de la lista de secciones.
+Cada sección tiene su propia `barra de herramientas`. Esta barra está situada a la izquierda de la lista de secciones.
 Esta barra permite ejecutar acciones relacionadas con la sección actual.
 
 ## Barra inferior

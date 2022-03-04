@@ -47,7 +47,7 @@ while the other tabs represents the simulations.
 
 ![Editor and its simulations](/img/docs/getting-started/assembledProject.png)
 
-Each section has its own **toolbar**. This toolbar is located at the right of the section list.
+Each section has its own `toolbar`. This toolbar is located at the right of the section list.
 
 This toolbar allows us to run actions related to the current section.
 
