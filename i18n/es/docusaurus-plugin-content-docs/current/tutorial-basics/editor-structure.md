@@ -42,3 +42,26 @@ pestaña, lo que facilita cambiar fácilmente entre proyectos abiertos. Si cerra
 
 Si cerramos todos los proyectos, JAMS cerrará el editor y nos trasladará a la ventana de inicio.
 
+## Secciones del proyecto
+
+Cada proyecto presenta una lista de pestañas con todas las secciones que tiene abiertas.
+
+Normalmente, la primera pestaña representa el editor del proyecto, mientras que las siguientes representaran las
+simulaciones que se vayan creando.
+
+![Editor and its simulations](/img/docs/getting-started/assembledProject-es.png)
+
+Cada sección tiene su propia **barra de herramientas**. Esta barra está situada a la izquierda de la lista de secciones.
+Esta barra permite ejecutar acciones relacionadas con la sección actual.
+
+## Barra inferior
+
+La sección inferior del editor es común a todas las secciones. En esta, se informa del último mensaje escrito en el
+informe. A la izquierda también se muestra la memoria que está usando actualmente JAMS.
+
+:::tip Recolector de basura
+
+JAMS está creado en Java, por lo que usa un recolector de basura. Podemos forzar el paso del recolector de basura
+pulsando el panel que informa sobre el uso de memoria.
+
+:::
