@@ -7,7 +7,7 @@ sidebar_position: 4
 Una configuración define cómo un proyecto debe ser simulado. Un proyecto puede tener varias configuraciones. Un usuario
 debe especificar una configuración antes de poder crear una simulación.
 
-La configuración actual se puede cambiar en la `barra de herramientas` de la estructura del proyecto. Las
+La configuración actual se puede cambiar en la **barra de herramientas** de la estructura del proyecto. Las
 configuraciones se pueden modificar pulsando el `botón de configuraciones` ⚙.
 
 ![Configurations' menu](/img/docs/getting-started/configurations-es.png)

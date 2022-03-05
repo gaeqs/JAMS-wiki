@@ -7,7 +7,7 @@ sidebar_position: 4
 Configurations define how a project has to be simulated. A project can have several configurations. The user must
 specify a configuration before they can create a simulation.
 
-The current configuration can be changed on the `toolbar` of the project structure. Configurations can be edited
+The current configuration can be changed on the **toolbar** of the project structure. Configurations can be edited
 clicking on the `configuration button` ⚙.
 
 ![Configurations' menu](/img/docs/getting-started/configurations.png)
