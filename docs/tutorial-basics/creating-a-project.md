@@ -30,6 +30,6 @@ JAMS doesn't allow us to create a new project if any of the parameters is invali
 
 :::
 
-Once we click the create button, JAMS will create the project, and we will be moved to the developing environment.
+Once we click the `create` button, JAMS will create the project, and we will be moved to the developing environment.
 
 ![Empty project](/img/docs/getting-started/emptyProject.png)

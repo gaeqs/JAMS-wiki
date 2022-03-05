@@ -32,6 +32,6 @@ son mostrados en rojo.
 
 :::
 
-Al pulsar "crear", JAMS creará el proyecto y nos trasladará al entorno de desarrollo.
+Al pulsar `crear`, JAMS creará el proyecto y nos trasladará al entorno de desarrollo.
 
 ![Empty project](/img/docs/getting-started/emptyProject-es.png)
