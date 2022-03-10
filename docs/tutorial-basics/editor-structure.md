@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# Editor structure
+# Editor's structure
 
-The JAMS's editor interface is very similar to the ones present in modern IDEs.
+The JAMS's editor's interface is very similar to the ones present in modern IDEs.
 
 ## Nodes
 
