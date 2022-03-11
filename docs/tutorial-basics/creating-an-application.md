@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Creating a "Hello world" application
+# Creating an application
 
 Once we have a project created, we can start developing our application.
 

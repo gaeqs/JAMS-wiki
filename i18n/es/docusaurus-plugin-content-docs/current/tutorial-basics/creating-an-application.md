@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Creando una aplicación "Hola mundo"
+# Creando una aplicación
 
 Una vez se tenga un proyecto creado, podemos empezar a programar.
 
