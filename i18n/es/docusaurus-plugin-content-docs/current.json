@@ -6,5 +6,9 @@
   "sidebar.docsSidebar.category.Getting started": {
     "message": "Empezando",
     "description": "The label for category Getting started in sidebar tutorialSidebar"
+  }  ,
+  "sidebar.docsSidebar.category.Nodes": {
+    "message": "Nodos",
+    "description": "The label for category Nodes in sidebar tutorialSidebar"
   }
 }

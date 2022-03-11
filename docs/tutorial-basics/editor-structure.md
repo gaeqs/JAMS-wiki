@@ -14,7 +14,7 @@ All tools are encapsulated in **nodes**. Each node can be unfolded to the sides 
 
 :::tip Unfold in a window
 
-Nodes can be configured to be unfolded in a separated window. This allows to unfold a undefined amount of nodes at the
+Nodes can be configured to be unfolded in a separated window. This allows unfolding an undefined number of nodes at the
 same time.
 
 Use the secondary button of the mouse to select an unfold mode.
@@ -22,6 +22,12 @@ Use the secondary button of the mouse to select an unfold mode.
 :::
 
 ![Editor](/img/docs/getting-started/detachedNodes.png)
+
+:::tip Moving nodes
+
+You can move the nodes to other positions dragging their unfolding button to another bar.
+
+:::
 
 ## Main menu
 

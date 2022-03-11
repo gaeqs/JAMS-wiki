@@ -24,6 +24,12 @@ Usa el botón secundario del ratón en un nodo para elegir su modo de despliegue
 
 ![Editor](/img/docs/getting-started/detachedNodes-es.png)
 
+:::tip Moviendo nodos
+
+Puedes mover un nodo a otra posición arrastrando su botón de despliegue a otra barra.
+
+:::
+
 ## Menú superior
 
 El menú superior del editor de JAMS funciona de manera idéntica a cualquier otro programa. Actualmente, encontramos
