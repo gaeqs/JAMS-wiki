@@ -19,7 +19,7 @@ on the element to delete.
 
 ## Sort files
 
-You can sort the files to assemble dragging and dropping it on the desired position.
+You can sort the files to assemble dragging and dropping it in the desired position.
 
 :::tip The order is important
 
