@@ -4,8 +4,7 @@ sidebar_position: 4
 
 # Memory
 
-La herramienta "memoria" permite visualizar la información que contiene la memoria y las cachés de un simulador
-actualmente.
+The memory tool allows visualizing the information inside the memory and the caches of a simulation right now. 
 
 ![Memory](/img/docs/nodes/memory-es.png)
 
