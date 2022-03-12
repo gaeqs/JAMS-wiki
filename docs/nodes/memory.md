@@ -6,7 +6,7 @@ sidebar_position: 4
 
 The memory tool allows visualizing the information inside the memory and the caches of a simulation right now. 
 
-![Memory](/img/docs/nodes/memory-es.png)
+![Memory](/img/docs/nodes/memory.png)
 
 ## Functionalities
 
