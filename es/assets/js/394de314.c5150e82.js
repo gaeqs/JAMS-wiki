@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkjamswiki=self.webpackChunkjamswiki||[]).push([[331],{2880:function(e){e.exports=JSON.parse('{"permalink":"/es/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

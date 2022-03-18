@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkjamswiki=self.webpackChunkjamswiki||[]).push([[9199],{2682:function(s){s.exports=JSON.parse('{"allTagsPath":"/es/blog/tags","slug":"/es/blog/tags/hello","name":"hello","count":2,"permalink":"/es/blog/tags/hello"}')}}]);

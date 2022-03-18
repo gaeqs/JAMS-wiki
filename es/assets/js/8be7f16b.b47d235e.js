@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkjamswiki=self.webpackChunkjamswiki||[]).push([[4277],{1021:function(e){e.exports=JSON.parse('{"permalink":"/es/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
