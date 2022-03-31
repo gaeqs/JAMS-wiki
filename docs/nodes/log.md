@@ -11,4 +11,6 @@ in other tools.
 
 ## Functionalities
 
-The log only has one button the user can interact with: the `C` button. This button allows you to clear the log.
+The log only has one button the user can interact with: the `C` button.
+This button allows you to clear the log.
+If `▼` is enabled, the log will scroll at the end of the visualizer when a new message is printed.
