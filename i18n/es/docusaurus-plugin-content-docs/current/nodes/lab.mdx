@@ -1,0 +1,97 @@
+---
+sidebar_position: 6
+---
+
+# Lab
+
+import SevenSegmentDisplay from '/img/docs/nodes/sevenSegmentDisplay.svg';
+import SevenSegmentDisplayExample from '/img/docs/nodes/sevenSegmentDisplayExample.svg';
+
+La herramienta laboratorio simula varios componentes básicos externos conectados a un simulador MIPS.
+
+![Lab](/img/docs/nodes/lab-es.png)
+
+:::caution Eventos
+
+Esta herramienta necesita que los eventos del simulador estén activados.
+
+:::
+
+## Funcionalidades
+
+Esta herramienta simula cuatro componentes básicos: dos visualizadores de siete segmentos, un teclado hexadecimal,
+un creador de interrupciones y un contador.
+
+### Visualizador de siete segmentos
+
+Un visualizador de siete segmentos permite representar un dígito o letra,
+y está controlado por el contenido de un byte en memoria.
+
+En concreto, cada segmento del visualizador está controlado por un bit del byte.
+Los bits que controlan cada segmento son los siguientes:
+
+<center>
+    <SevenSegmentDisplay/>
+</center>
+
+Si por ejemplo, se desea representar el dígito `5` en el visualizador, se debe guardar en la dirección del byte
+el valor `0b01101101`.
+
+<center>
+    <SevenSegmentDisplayExample/>
+</center>
+
+Las direcciones de memoria por defecto que controlan los dos visualizadores son la dirección `0xffff0010` para el
+visualizador derecho y `0xffff0011` para el visualizador izquierdo. Estos valores se pueden cambiar en la configuración,
+en el apartado `Simulación > MIPS`
+
+### Teclado hexadecimal
+
+El segundo componente de la herramienta es el teclado hexadecimal. Este teclado permite introducir valores que el
+simulador puede interpretar.
+
+Cuando el usuario pulsa uno de los botones, JAMS genera una interrupción *hardware* de nivel 3. El programa
+puede interpretar el evento implementando un gestor de excepciones en la dirección por defecto `0x80000260`.
+
+Para saber qué botones del teclado están activados, se deben leer las direcciones de memoria por defecto
+`0xffff0013` y `0xffff0014`. Cada bit de los dos bytes representan un botón en el teclado. Si un bit contiene
+el valor 1, el botón que representa está seleccionado.
+
+Como ejemplo, si el valor de la dirección de memoria `0xffff0013` es `0b00000100` y el valor de la dirección
+de memoria `0xffff0014` es `0b10000100`, los botones 2, A y F están seleccionados.
+
+### Generador de interrupciones
+
+La herramienta permite generar dos tipos de interrupciones: interrupciones *software* e interrupciones *hardware*.
+
+Las interrupciones *software* permiten informar al programa de errores o excepciones en la simulación. Este tipo
+de interrupciones deben contener una **causa** que el programa puede leer implementando un gestor de excepciones.
+
+Las interrupciones *hardware* permiten informar al programa de eventos generados por los diferentes componentes
+conectado al simulador. Estas interrupciones están definidas por un nivel entre el nivel 2 al 63
+(el nivel 1 está reservado para las interrupciones *software* y el nivel 0 representa el estado sin interrupciones).
+Este nivel permite calcular la dirección de memoria del gestor de interrupciones.
+
+:::info Puntos de entrada
+
+Los puntos de entrada de los gestores de excepciones son calculados usando el nivel y los parámetros
+del coprocesador 0 `IntCtl/VS` (por defecto 1) y `EBase` (por defecto 0).
+
+El punto de entrada se calcula de la siguiente manera:
+
+`address = EBase + offset & 0x3fffffff | 0x80000000`
+
+Donde `offset` es, dependiendo el tipo de interrupción:
+<ul>
+    <li>Interrupción <i>software</i>: 0x180</li>
+    <li>Error de caché: 0x100</li>
+    <li>Interrupción <i>hardware</i>: 0x200 + level * VS * 32</li>
+</ul>
+
+:::
+
+### Contador
+
+El contador es una pequeña herramienta que genera una interrupción *hardware* de nivel 2 cada cierto número de ciclos
+especificados por el usuario. Este valor se puede asignar desde la interfaz o escribiéndolo en la dirección de memoria
+`0xffff0012`.

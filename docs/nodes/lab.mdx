@@ -1,0 +1,93 @@
+---
+sidebar_position: 6
+---
+
+# Lab
+
+import SevenSegmentDisplay from '/img/docs/nodes/sevenSegmentDisplay.svg';
+import SevenSegmentDisplayExample from '/img/docs/nodes/sevenSegmentDisplayExample.svg';
+
+The lab tool simulates basic external components attached to a MIPS simulator.
+
+:::caution Events
+
+This tool requires events to be enabled.
+
+:::
+
+![Lab](/img/docs/nodes/lab.png)
+
+## Functionalities
+
+### Seven-segment display
+
+A seven-segment display allows an easy representation of a digit or letter.
+It is controlled by the content of a byte in the memory.
+
+Specifically, each display's segment is controlled by a bit inside that byte. Those bits are the following:
+
+<center>
+    <SevenSegmentDisplay/>
+</center>
+
+For example, to represent the digit `5` in the display, the value `0b01101101` must be saved in the
+display's address.
+
+<center>
+    <SevenSegmentDisplayExample/>
+</center>
+
+The default memory address of both displays are the address `0xffff0010` for the right display and the address
+`0xffff0011` for the left display.
+These values can be modified in the configuration, on the `Simulation > MIPS` section.
+
+### Hexadecimal keyboard
+
+The second component is a hexadecimal keyboard.
+This keyboard allows the user to input values the simulation can interprete.
+
+When the user clicks one of the buttons, JAMS generates a level 3 hardware exception.
+The application can interprete the event creating an interrupt handler at default address `0x80000260`.
+
+To know which buttons are selected, the default memory addresses `0xffff0013` and `0xffff0014` must be read.
+Each bit of both bytes represents a keyboard button.
+If a bit is enabled, the button is selected.
+
+For example, if the value at address `0xffff0013` is `0b00000100` and the value at address
+`0xffff0014` is `0b10000100`, buttons 2, A and F are selected.
+
+### Interrupt generator
+
+This tool allows generating two interruption types: software interrupts and hardware interrupts.
+
+Software interrupts inform the application about errors and exceptions on the simulation.
+This kind of interrupts must contain a **cause** the application can read implementing an interrupt handler.
+
+Hardware interruptions inform the application about events generated from external components attached to the
+simulator.
+These interruptions are defined by a level between 2 and 63 (level 1 is reserved for software interrupts and level 0
+represents the no-interrupt state).
+The level is used to calculate the entry point of the interrupt handler.
+
+:::info Entry points
+
+Interrupt handlers' entry points are calculated using the interrupt level and the COP0 parameters
+`IntCtl/VS` (1 by default) and `EBase` (0 by default).
+
+The entry point is calculated using the following formula:
+
+`address = EBase + offset & 0x3fffffff | 0x80000000`
+
+Where `offset` is, depending on the interruption:
+<ul>
+    <li>Software interrupt: 0x180</li>
+    <li>Cache error: 0x100</li>
+    <li>Hardware interrupt: 0x200 + level * VS * 32</li>
+</ul>
+
+:::
+
+### Counter
+
+The counter is a small tool that generates level 2 hardware interrupts every number of cycles.
+This number can be assigned from the tool or writing a byte on the default memory address `0xffff0012`.
