@@ -12,3 +12,5 @@ permite a otras herramientas informar sobre cambios de estados y errores.
 ## Funcionalidades
 
 El informe solo tiene un botón con el que se puede interactuar: el botón `C`. Este botón permite limpiar el informe.
+
+Si `▼` está activado, el informe se desplazará al final del visualizador siempre que un nuevo mensaje sea escrito.
