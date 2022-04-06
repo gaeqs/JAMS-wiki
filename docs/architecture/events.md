@@ -28,7 +28,7 @@ private void onLanguageRegister(ManagerElementRegisterEvent.After<Language> even
 }
 ```
 
-This method, after it is registered in a [manager](managers), will be invoked when a new languaged is added to the
+This method, after it is registered in a [manager](managers), will be invoked when a new language is added to the
 manager.
 
 :::tip Generic
