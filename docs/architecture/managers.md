@@ -12,17 +12,17 @@ JAMS provides three basic manager types.
 
 ### Basic managers
 
-Implemented by the class `Manager`. It Contains a set of elements without any hierarchy.
+Implemented by the `Manager` class. It Contains a set of elements without any hierarchy.
 
 ### Managers with a default value
 
 Behaves as a normal manager, with the difference that one of its values is the default value. These managers extend the
-class `DefaultValuableManager`.
+`DefaultValuableManager` class.
 
 ### Managers with a selected value
 
 Behaves as a manager with a default value, with the difference that one of its values is selected. When the selected
-value is deleted, the default value is selected. These managers extend the class `SelectableManager`.
+value is deleted, the default value is selected. These managers extend the `SelectableManager` class.
 
 ## Providers
 
@@ -122,7 +122,7 @@ Jams.REGISTRY.registerPrimary(new MyManager(myPlugin));
 
 ## Listening managers' changes
 
-Managers use JAMS's event system: a listener can be implemented easily.
+Managers use [JAMS's event system](events): a listener can be implemented easily.
 
 ```java
 public void registerListeners() {

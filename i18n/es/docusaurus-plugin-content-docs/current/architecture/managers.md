@@ -125,7 +125,7 @@ Jams.REGISTRY.registerPrimary(new MyManager(myPlugin));
 
 ## Escuchar cambios en los gestores
 
-Los gestores usan el sistema de eventos integrado en JAMS, por lo que escuchar cambios en los gestores es muy sencillo.
+Los gestores usan el [sistema de eventos](events) integrado en JAMS, por lo que escuchar cambios en los gestores es muy sencillo.
 
 ```java
 public void registerListeners() {
