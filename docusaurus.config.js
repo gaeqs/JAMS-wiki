@@ -84,7 +84,6 @@ const config = {
                             {
                                 label: 'GitHub',
                                 href: 'https://github.com/gaeqs/JAMS',
-                                href: 'https://github.com/gaeqs/JAMS',
                             },
                         ],
                     },
@@ -94,7 +93,7 @@ const config = {
             prism: {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
-                additionalLanguages: ['java']
+                additionalLanguages: ['java', 'asm6502']
             },
         }),
 };
