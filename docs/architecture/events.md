@@ -41,7 +41,7 @@ If the broadcast the listener is registered on emits a `ManagerElementRegisterEv
 
 :::
 
-::tip Hierarchies
+:::tip Hierarchies
 
 An event can extend another event. This allows the developer to create an event hierarchy. A listener that asks for an
 event will be invoked when that event or one of its children is emitted.
