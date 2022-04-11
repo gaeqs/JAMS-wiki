@@ -1,0 +1,71 @@
+---
+sidebar_position: 7
+---
+
+# Memoria
+
+import Caches from '/img/docs/architecture/caches.svg';
+
+La memoria es la parte del simulador donde se guardan los datos y las instrucciones de una aplicación.
+
+## Estructura de la memoria
+
+La memoria de la arquitectura MIPS32 es una memoria de 4 GB (2<sup>32</sup> bytes) separada en las siguientes secciones:
+
+|    Sección    |     Tipo     | Primera dirección | Uso                                                           |
+|:-------------:|:------------:|:-----------------:|---------------------------------------------------------------|
+|   Reserved    | Kernel Level |    0xFFFF0000     | Sección usada para leer y escribir de componentes.            |
+|  Kernel Data  | Kernel Level |    0x90000000     | Datos estáticos del *kernel*.                                 |
+|  Kernel Text  | Kernel Level |    0x80000000     | Instrucciones del *kernel*.                                   |
+| Stack Segment |  User Level  |         ↓         | Pila                                                          |
+| Dynamic Data  |  User Level  |         ↑         | Memoria reservadas en tiempo de ejecución.                    |
+|  Static Data  |  User Level  |    0x10000000     | Datos estáticos generados al por las directivas al ensamblar. |
+| Text Segment  |  User Level  |    0x04000000     | Instrucciones del programa.                                   |
+|   Reserved    | Kernel Level |    0x00000000     | Usado por el sistema operativo. Sin uso en el simulador.      |
+
+## Implementación de la memoria
+
+Reservar 4 GB de memoria para cada simulación no es una buena idea: ocuparía una gran parte de la RAM de un computador y
+la gran mayoría no se usaría. Para evitar este problema existen varias técnicas para la implementación de la memoria:
+
+- Limitar la memoria de cada sección.
+- Partir las secciones en sub-secciones.
+
+JAMS implementa la segunda opción: cada sección de memoria es separada en bloques de 4 KB. Estas secciones no serán
+reservadas en memoria hasta que sean necesarias.
+
+Con esta implementación, se reserva un array inicial de 2<sup>22</sup> (2<sup>32</sup> / 2<sup>12</sup>) entradas, lo
+que equivaldría a unos simples 8 MB. Según el uso de la memoria dentro del simulador, se irán reservando trozos de 4 KB.
+
+## Cachés
+
+Las cachés son memorias más pequeñas y más rápidas que están situadas entre la memoria y el procesador. Los computadores
+actuales suelen tener varios niveles de caché, actuando unas sobre otras.
+
+En JAMS, las memorias funcionan de manera muy similar.
+
+<center>
+    <Caches/>
+</center>
+
+Tanto las cachés como las memorias implementan la interfaz `Memory`. Esta interfaz define los métodos de lectura y
+escritura. Cuando un simulador necesita leer o escribir en la memoria, llama al método correspondiente en su memoria.
+
+Lo que no sabe el simulador es que su memoria puede ser una caché con una referencia a otra memoria. Cuando una
+caché es invocada en una operación de lectura o escritura, es ella la que gestiona la operación y, si es necesario,
+accede a la memoria que tiene como referencia.
+
+Con esta sencilla arquitectura se genera una jerarquía de memorias muy similar a la que encontramos en computadores
+reales.
+
+## Constructores
+
+Para permitir crear nuevos tipos de cachés y memorias, JAMS tiene dos [gestores](managers)
+que guardan constructores de cachés y de memorias. Estos gestores son `MemoryBuilderManager` y `CacheBuilderManager`,
+los cuales gestionan elementos de tipo `MemoryBuilder` y `CacheBuilder` respectivamente.
+
+La clase `MemoryBuilder` es muy sencilla, ya que contiene un único método que permite crear una nueva memoria.
+
+La clase `CacheBuilder` es más compleja: también define propiedades de la caché. En el gestor estará registrado
+el constructor con los parámetros por defecto, mientras que las
+[configuraciones de los proyectos](../tutorial-basics/configurations) almacenarán copias con los parámetros deseados.
