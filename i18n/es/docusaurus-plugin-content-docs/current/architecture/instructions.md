@@ -25,8 +25,8 @@ Esta interfaz es implementada por dos clases abstractas básicas: `BasicInstruct
 
 Las instrucciones básicas (representadas por la clase abstracta `BasicInstruction`) representan instrucciones normales
 del ensamblador. Estas instrucciones tienen una traducción directa a código máquina. Esta clase abstracta define
-elementos más concretos, como el código de operación, la unidad aritmético-lógica donde la instrucción debe ejecutarse,
-o un nuevo método `match` que permite saber si un código de instrucción representa la instrucción.
+elementos más concretos, como el código de operación, la unidad aritmético-lógica donde la instrucción debe ejecutarse y
+un nuevo método `match` que permite saber si un código de instrucción representa la instrucción.
 
 Esta clase define los métodos abstractos `assembleBasic` y `assembleFromCode`. Estos métodos permiten crear un elemento
 de tipo `AssembledInstruction` mediante un código de instrucción o un conjunto de parámetros.
@@ -60,9 +60,9 @@ public class InstructionAbsDouble extends BasicRFPUInstruction<InstructionAbsDou
 Las pseudo-instrucciones son instrucciones que el ensamblador convertirá en un conjunto de instrucciones básicas. Pueden
 considerarse un conjunto de instrucciones que ejecutan una acción común.
 
-Estas clases están representadas por la clase `PseudoInstruction`, la cual define los métodos `getInstructionAmount`.
-Este método le permite saber al ensamblador cuántas instrucciones debe esperar que la pseudo-instrucción dé como
-resultado dependiendo del conjunto de parámetros dado.
+Estas instrucciones están representadas por la clase `PseudoInstruction`, la cual define el
+método `getInstructionAmount`. Este método le permite saber al ensamblador cuántas instrucciones debe esperar que la
+pseudo-instrucción dé como resultado dependiendo del conjunto de parámetros dado.
 
 Esta clase implementa varios métodos estáticos que sirven de utilidad para implementar pseudo-instrucciones rápidamente.
 
@@ -117,10 +117,17 @@ de `AssembledInstruction` pueden definir métodos útiles que permiten sacar par
 ## Ejecución de una instrucción
 
 Por último, las instrucciones también están definidas por una clase `InstructionExecution`. Esta clase implementa la
-ejecución de una instrucción, e implementa muchos métodos útiles que los hijos pueden usar para definir la ejecución de
-sus instrucciones.
+ejecución de una instrucción en una arquitectura, e implementa muchos métodos útiles que los hijos pueden usar para
+definir la ejecución de sus instrucciones.
 
 La clase `InstructionExecution` no debe ser extendida directamente, sino que se debe extender la
-clase `SingleCycleExecution` para ejecuciones uni-ciclo y `MultiCycleExecution` para ejecuciones multi-ciclo.
+clase `SingleCycleExecution` para ejecuciones uni-ciclo y `MultiCycleExecution` para ejecuciones multi-ciclo o
+segmentadas.
 
 Estas ejecuciones deben ser registradas en la instrucción usando el método `addExecutionBuilder`.
+
+## Conjuntos de instrucciones
+
+Las instrucciones están agrupadas en **conjuntos de instrucciones**. Un proyecto usará un conjunto de instrucciones para
+ensamblar su código, ayudar al usuario en el editor e interpretar el código máquina del simulador. Los conjuntos de
+instrucciones están gestionados por el gestor `InstructionSetManager`.
