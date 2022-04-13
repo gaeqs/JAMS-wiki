@@ -14,7 +14,7 @@ A language packet is a folder or compressed file that contains a `language.json`
 several [YAML](https://yaml.org/) files. This folder or file can be located inside a plugin or inside
 the `~/JAMS/languages` folder.
 
-An example of a `janguage.json` file will be the following:
+An example of a `janguage.json` file would be the following:
 
 ```json title="language.json"
 {
@@ -45,7 +45,7 @@ The file contains the following parameters:
 YAML files can be located inside folders or in the root directory of the packet. They must be defined in
 the `language.json` file using a relative path from the packet.
 
-An example of a YAML file will be the following:
+An example of a YAML file would be the following:
 
 ```yaml title="interface.yml"
 START_TITLE: JAMS {VERSION}

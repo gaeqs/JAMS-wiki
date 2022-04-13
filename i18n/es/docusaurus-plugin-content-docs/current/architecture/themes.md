@@ -116,4 +116,6 @@ del tema que define. Si existen varios paquetes apuntando al mismo tema, los dos
 mismo tema.
 
 Una gran diferencia a los idiomas es que las extensiones de los temas **no tienen prioridad**. *JavaFX* sigue el
-estándar CSS para la prioridad de las definiciones, por lo que una capa de prioridades más es innecesaria.
+[estándar CSS para la prioridad de las definiciones](
+https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#how_is_specificity_calculated), por lo que una capa de
+prioridades más es innecesaria.
