@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Languages
 
-Just like any modert application, JAMS presents a localization system based on language packets.
+Just like any modern application, JAMS presents a localization system based on language packets.
 
 Any user or plugin can create a language packet that adds or modifies a language.
 
