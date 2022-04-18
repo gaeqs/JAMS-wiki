@@ -115,7 +115,7 @@ preparado**.
 
 ### Acceder de manera directa.
 
-Un componente puede acceder al idioma selecciones usando el método `Manager.ofS(Language.class).getSelected()`. La
+Un componente puede acceder al idioma seccionado usando el método `Manager.ofS(Language.class).getSelected()`. La
 manera más correcta para pedir un mensaje es usando el método `getOrDefault(String)`. Este método devolverá el mensaje
 asociado al identificador dado. Si el idioma no contiene ningún mensaje con ese identificador, lo buscará en el idioma
 por defecto. Si ninguno de los dos idiomas contiene el mensaje, devuelve una cadena de texto vacía.
