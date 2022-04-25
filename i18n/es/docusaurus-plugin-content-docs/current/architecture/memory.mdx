@@ -18,8 +18,8 @@ La memoria de la arquitectura MIPS32 es una memoria de 4 GB (2<sup>32</sup> byte
 |  Kernel Data  | Kernel Level |    0x90000000     | Datos estáticos del *kernel*.                                 |
 |  Kernel Text  | Kernel Level |    0x80000000     | Instrucciones del *kernel*.                                   |
 | Stack Segment |  User Level  |         ↓         | Pila                                                          |
-| Dynamic Data  |  User Level  |         ↑         | Memoria reservadas en tiempo de ejecución.                    |
-|  Static Data  |  User Level  |    0x10000000     | Datos estáticos generados al por las directivas al ensamblar. |
+| Dynamic Data  |  User Level  |         ↑         | Memoria reservada en tiempo de ejecución.                     |
+|  Static Data  |  User Level  |    0x10000000     | Datos estáticos generados por las directivas al ensamblar.    |
 | Text Segment  |  User Level  |    0x04000000     | Instrucciones del programa.                                   |
 |   Reserved    | Kernel Level |    0x00000000     | Usado por el sistema operativo. Sin uso en el simulador.      |
 
